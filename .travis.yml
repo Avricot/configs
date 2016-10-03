@@ -5,6 +5,8 @@ jdk:
   - oraclejdk8
 scala:
   - 2.11.8
+  - 2.12.0-M4
+  - 2.12.0-M5
   - 2.12.0-RC1
 
 cache:
@@ -14,8 +16,6 @@ cache:
 
 env:
   - SBT_TASK=test
-  - SBT_TASK=docs/tut
-  - SBT_TASK=bench/jmh:run
 
 script:
   - sbt ++$TRAVIS_SCALA_VERSION $SBT_TASK
